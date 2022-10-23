@@ -1,0 +1,15 @@
+//asset/scss/components/_category.scss
+
+.cate_banner{
+    height: 300px;
+    background-color: #555;
+    background-size: cover;
+    background-image: url(../../images/adidas_banner.jpg);
+    animation: 30s moveBg infinite linear;
+}
+@keyframes moveBg {
+    0%{background-position: 50% 15%;}
+    50%{background-position: 50% 85%;}
+    100%{background-position: 50% 15%;}
+}
+

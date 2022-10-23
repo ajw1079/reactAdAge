@@ -1,0 +1,40 @@
+import React from 'react';
+import {Link} from 'react-router-dom';
+import logoImg from '../../asset/images/logo.png';
+
+const Header = () => {
+    const menuArr = [
+        ["nike", "/nike"],
+        ["adidas", "/adidas" ],
+        ["puma", "/puma"]
+    ];
+
+    return (
+        <>
+            {/* header 영역 */}
+            <header className="header-space h-60">
+                <div className="wrap-1 flex-style-3 h-100-per">
+                    <div className="logo">
+                        <Link to="/">
+                            <img className="d-block h-40" src={logoImg} alt="로고"/>
+                        </Link>
+                    </div>
+                    <nav>
+                        <ul className="flex-style-2 col-gap-20">
+                            {menuArr.map((v,i) => (
+                            <li key={i}>
+                                <Link className="text-uppercase d-block" to={"/category"+v[1]}>{v[0]}</Link>
+                            </li>
+                            ))}
+                        </ul>
+                    </nav>
+
+                </div>
+            </header>
+        </>
+
+    );
+
+
+}
+export default Header;
