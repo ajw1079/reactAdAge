@@ -19,9 +19,9 @@ function App() {
 
       <Routes>
         <Route exact path="/" element={<Main/>}></Route>
-        <Route exact path="/category/:brand" element={<Category/>}></Route>
+        <Route exact path="/category/:index" element={<Category/>}></Route>
         {/* 추후에 useParams를 통해 던질 값에 대해서는 변수명을 일치시킬 것 */}
-        <Route exact path="/detail" element={<Detail/>}></Route>
+        <Route exact path="/detail/:index" element={<Detail/>}></Route>
       </Routes>
 
       <Footer/>
